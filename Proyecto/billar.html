@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <script src="billar.js"></script>   
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="reloj()">
+    <table>
+        <tr>
+            <td><p>Mesa 1</p></td>
+            <td><p>Mesa 2</p></td>
+            <td><p>Mesa 3</p></td>
+        </tr>
+        <tr>
+            <td><img src="Imagenes/mesaDisponible.png" id="mesa1" onclick="alquilarMesa1();"></td>
+            <td><img src="Imagenes/mesaDisponible.png" id="mesa2" onclick="alquilarMesa2();"></td>
+            <td><img src="Imagenes/mesaDisponible.png" id="mesa3" onclick="alquilarMesa3();"></td>
+        </tr>
+        <tr>
+            <td>
+                <p id="tiempoInicio1">Hora de Inicio: </p>
+                <p id="tiempoFinal1">Hora de Final: </p>
+                <p id="total1">Total:</p>            
+            </td>
+            <td>
+                <p id="tiempoInicio2">Hora de Inicio: </p>
+                <p id="tiempoFinal2">Hora de Final: </p>
+                <p id="total2">Total:</p> 
+            </td>
+            <td>
+                <p id="tiempoInicio3">Hora de Inicio: </p>
+                <p id="tiempoFinal3">Hora de Final: </p>
+                <p id="total3">Total:</p> 
+            </td>   
+        </tr>
+
+        <tr>
+            <td><p>Mesa 4</p></td>
+            <td><p>Mesa 5</p></td>
+            <td><p>Mesa 6</p></td>
+        </tr>
+        <tr>
+            <td><img src="Imagenes/mesaDisponible.png" id="mesa4" onclick="alquilarMesa4();"></td>
+            <td><img src="Imagenes/mesaDisponible.png" id="mesa5" onclick="alquilarMesa5();"></td>
+            <td><img src="Imagenes/mesaDisponible.png" id="mesa6" onclick="alquilarMesa6();"></td>
+        </tr>
+        <tr>
+            <td>
+                <p id="tiempoInicio4">Hora de Inicio: </p>
+                <p id="tiempoFinal4">Hora de Final: </p>
+                <p id="total4">Total:</p> 
+            </td>
+            <td>
+                <p id="tiempoInicio5">Hora de Inicio: </p>
+                <p id="tiempoFinal5">Hora de Final: </p>
+                <p id="total5">Total:</p> 
+            </td>
+            <td>
+                <p id="tiempoInicio6">Hora de Inicio: </p>
+                <p id="tiempoFinal6">Hora de Final: </p>
+                <p id="total6">Total:</p> 
+            </td>   
+        </tr>
+    </table>
+</body>
+</html>
