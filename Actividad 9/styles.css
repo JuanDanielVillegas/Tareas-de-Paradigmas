@@ -1,0 +1,13 @@
+body{
+    background: rgb(114, 19, 19);
+}
+div{
+    margin-left: 500px;
+    margin-top: 150px;
+}
+p{
+    color: rgb(255, 255, 255);font-style: Arial; font-size: 27px;
+}
+input, button{
+    color: rgb(0, 0, 0);font-style: Arial; font-size: 25px;
+}
