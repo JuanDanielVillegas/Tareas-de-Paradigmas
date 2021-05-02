@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <p id = "cargando">cargando datos</p>
+    <img id = "gif" src="https://media3.giphy.com/media/3oEjI6SIIHBdRxXI40/200.gif" style="width: 500px;" >
+    <p id="error"></p>
+    <center>
+        <a href="index.html">Regresar</a>
+        <h1 id="id"></h1>
+        <h1 id="titulo"></h1>
+        <img id="imagen">
+    </center>
+
+    <script>
+        const url = new URL(window.location.href)
+        console.log(url);
+        const parametro = url.searchParams;
+        const id = parametro.get("id");
+        console.log(id);
+        document.getElementById("id").innerHTML = id;
+
+        const urlDetalle = `https://jsonplaceholder.typicode.com/photos/${id}`;
+        fetch(urlDetalle)
+            .then(response => response.json())
+            .then(foto => {
+                document.getElementById("titulo").innerHTML = foto.title;
+                document.getElementById("imagen").src = foto.thumbnailUrl;
+            })
+            .catch(error => {
+                document.getElementById("error").innerHTML = error.message;
+            })
+            .finally(() => {
+                document.getElementById("cargando").innerHTML = "";
+                document.getElementById("gif").src = "";
+                console.log("proceso terminado");
+            })
+    </script>
+</body>
+</html>
